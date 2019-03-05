@@ -1,0 +1,171 @@
+<html>
+<head>
+<style>
+#display_container
+{
+display:none
+}
+
+
+#myHeader {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+} 
+
+
+
+
+.header{
+  background-color: white;
+  color: black;
+  margin: 20px;
+  padding: 20px;
+} 
+
+
+
+.visible {
+  visibility: visible;
+}
+.invisible {
+  visibility: hidden;
+}
+
+
+  .divText {
+            padding:2px 0;
+        }
+
+
+
+
+</style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+<script src="https://unpkg.com/react@15/dist/react.min.js"> 
+</script><script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js">
+</script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+
+
+
+<script language="JavaScript">
+<!--
+function n()
+{
+var name=document.add.txt_name.value 
+
+
+document.getElementById("result1").innerHTML = name;
+}
+
+
+function p()
+{
+var ph=document.add.txt_phone.value 
+
+
+document.getElementById("result2").innerHTML = ph;
+
+
+}
+
+function delete_data()
+
+{
+
+  document.getElementById("display_values").style.display = "none";
+
+
+}
+
+
+
+
+
+function display()
+
+{
+
+document.getElementById("display_container").style.display = "block";
+var ph=document.add.txt_phone.value 
+var name=document.add.txt_name.value 
+
+document.getElementById("append_n").innerHTML = name;
+document.getElementById("append_p").innerHTML = ph;
+
+
+
+document.getElementById("add_container").style.display = "none";
+
+}
+
+
+
+
+
+//-->
+</script>
+</head>
+<body>
+<form name="add">
+<div id = "root">
+<div id = "main"><h1 id="myHeader">PHONE DIRECTORY</h1></div>
+
+<div id="add_container" class="visible"><h1 id="myHeader">ADD SUBSCRIBER</h1>
+
+
+<table border="0">
+
+
+
+<tr>
+<td><a href="home.html">back</a></td></tr>
+<tr>
+<td>NAME </td><td><input type="text" name="txt_name" onkeypress="n()" /></td>
+</tr>
+<tr>
+<td>PHONE </td><td><input type="text" name="txt_phone" onkeypress="p()" /></td>
+</tr>
+<tr><td>Subscriber to be added</td></tr>
+<tr>
+<td>NAME </td><td colspan="2"><div id = "result1"></div></td></tr>
+<tr>
+<td>PHONE </td><td colspan="2"><div id = "result2"></div></td></tr>
+</
+
+<tr>
+<td colspan="2" align="center"><input type="button" value="ADD " onclick="display()" /></td>
+
+</tr>
+</table>
+
+</div>
+<div id = "display_container" >
+<table border="0">
+<tr>
+<td colspan="2" align="center"><a href="add.html"><input type="button" value="ADD " /></a></td></tr>
+<tr>
+<td align="center">NAME </td>
+<td align="center">PHONE </td></tr><tr>
+
+
+<div id = "display_values" >
+
+<tr>
+<td><div id = "append_n"></div></td><td><div id = "append_p"></div></td><td><input type="button" value="DELETE" onclick="delete_data()"/></td></td>
+
+
+</tr>
+
+</div>
+</div>
+</div>
+</form>
+</body>
+
+
+</html>
